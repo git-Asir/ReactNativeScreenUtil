@@ -70,7 +70,7 @@ export function scaleSize(size: Number) {
  * @param size 传入设计稿上的px , allowFontScaling 是否根据设备文字缩放比例调整，默认不会
  * @returns {Number} 返回实际sp
  */
-function setSpText(size: Number, allowFontScaling = false) {
+export function setSpText(size: Number, allowFontScaling = false) {
     const scale = Math.min(_scaleWidth, _scaleHeight);
     const fontSize = allowFontScaling ? 1 : fontScale;
     return size * scale / fontSize;
